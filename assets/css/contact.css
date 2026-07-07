@@ -1,0 +1,147 @@
+/* تنظیمات کلی بخش تماس */
+.contact-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+/* تیتر اصلی */
+.contact-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.contact-header h1 {
+    font-size: 64px; /* هم‌اندازه با تیتر بلاگ */
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.04em;
+}
+
+.contact-main-section {
+    display: grid;
+    /* فرض می‌کنیم عکس فضای کمتری (1 واحد) و فرم فضای بیشتری (2 واحد) می‌خواهد */
+    /* در صورت نیاز به نصف-نصف بودن، این خط را به 1fr 1fr تغییر دهید */
+    grid-template-columns: 1fr 2fr; 
+    gap: 48px;
+    align-items: stretch; /* هم‌تراز کردن ارتفاع دو بخش */
+}
+
+/* استایل کانتینر عکس سمت چپ */
+.contact-image-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-image-wrapper .contact-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* پر کردن کادر بدون به هم ریختن ابعاد */
+    border-radius: 24px; /* همخوانی با گوشه‌های گرد سایت */
+}
+
+/* حذف margin محدودکننده از فرم (چون حالا توسط گرید کنترل می‌شود) */
+.contact-form-container {
+    max-width: 100%;
+    margin: 0;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+
+/* گرید بندی ردیف‌ها */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+/* استایل هر فیلد */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    margin-bottom: 48px;
+}
+
+/* استایل لیبل‌ها (Labels) */
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #A0AEC0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+}
+
+/* استایل ورودی‌ها (Inputs, Select, Textarea) */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 18px 24px;
+    border: 1px solid #E2E8F0; /* رنگ حاشیه ملایم */
+    border-radius: 16px; /* گوشه‌های گرد مشابه سایر کارت‌ها */
+    font-size: 16px;
+    color: #000000;
+    background-color: #FFFFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+}
+
+/* استایل Placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #A0AEC0;
+}
+
+/* حالت فوکوس */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #000000; /* در حالت فوکوس حاشیه مشکی می‌شود */
+}
+
+/* دکمه سابمیت */
+.form-submit {
+    display: flex;
+    justify-content: flex-start; /* اگر می‌خواهید چپ‌چین باشد، به flex-start تغییر دهید */
+}
+
+.submit-btn {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 20px 48px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333333;
+}
+
+/* رسپانسیو برای موبایل */
+@media (max-width: 768px) {
+    .contact-header h1 {
+        font-size: 48px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr; /* در موبایل تک ستونه می‌شود */
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+}

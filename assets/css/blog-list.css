@@ -1,0 +1,233 @@
+/*---------------Blog List Page-----------*/
+.blog-header {
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-header-content {
+    max-width: 700px;
+    width: 100%;
+}
+
+.blog-header h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.blog-header p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px; 
+    padding: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 16px;
+}
+
+.btn-search {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-search:hover {
+    background-color: #333;
+}
+
+/* تنظیمات کانتینر اصلی بلاگ و سایدبار */
+.blog-layout {
+    display: flex;
+    gap: 30px; 
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+/* ستون مقالات */
+.blog-articles {
+    flex: 1;
+    max-width: 840px; 
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+/* استایل هر کارت مقاله */
+.blog-card {
+    display: flex;
+    gap: 30px; 
+    align-items: center; 
+}
+
+.blog-card-img img {
+    width: 290px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.blog-card-content {
+    flex: 1;
+}
+
+.blog-card-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.blog-card-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* بخش متا (نویسنده و تاریخ) */
+.blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: #000;
+}
+
+.blog-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* خط عمودی (دیوایدر) */
+.vertical-divider {
+    width: 1px;
+    height: 25px;
+    background-color: #ddd; 
+}
+
+.blog-date {
+    font-weight: 500;
+    color: #666;
+}
+
+/* ==================== سایدبار ==================== */
+
+.sidebar {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sidebar-recipes h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.sidebar-recipe-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-recipe-item img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.sidebar-recipe-info h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.sidebar-recipe-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.sidebar-ad img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* استایل کانتینر صفحه‌بندی */
+.pagination {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 12px; 
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+/* استایل مربع‌های شماره صفحه */
+.page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px; 
+    height: 64px; 
+    border: 1px solid #E0E0E0; 
+    border-radius: 12px; 
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease; 
+}
+
+/* استایل مربعی که انتخاب شده (صفحه ۱) */
+.page-link.active {
+    background-color: #000; 
+    color: #fff; 
+    border-color: #000;
+}
+
+/* افکت هاور برای بقیه مربع‌ها (وقتی موس روی آن‌ها می‌رود) */
+.page-link:hover:not(.active) {
+    background-color: #f5f5f5;
+    border-color: #ccc;
+}
+
+/* استایل فلش دکمه بعدی */
+.next-page {
+    font-size: 24px; 
+    padding-bottom: 4px; 
+}

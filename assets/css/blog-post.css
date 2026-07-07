@@ -1,0 +1,288 @@
+/* =========================================
+   Blog Post Page Specific Styles
+========================================= */
+
+/* تنظیمات کلی محفظه وبلاگ */
+.blog-container {
+    padding: 40px 0;
+}
+
+/* هدر مقاله */
+.blog-post-header {
+    text-align: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto 40px auto;
+}
+
+.blog-post-header h1 {
+    font-size: 64px; 
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+
+
+.blog-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #000;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-date {
+    border-left: 1px solid #ddd;
+    padding-left: 30px;
+}
+
+.blog-intro {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.blog-hero-image {
+    width: 100%;
+    max-width: 1280px; /* همان عرضی که برای کانتینر خبرنامه در base.css دادید */
+    height: 600px; /* بر اساس ابعاد فیکس شده قبلی */
+    object-fit: cover; /* برای جلوگیری از دفرمه شدن عکس */
+    margin: 0 auto 40px auto; /* وسط‌چین کردن عکس و فاصله از پایین */
+    display: block;
+    border-radius: 20px; /* در صورت نیاز به گوشه‌های گرد */
+}
+
+/* گرید اصلی: مقاله در سمت چپ و سایدبار در سمت راست */
+.blog-content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* مقاله فضای بیشتری میگیرد */
+    margin-left: 130px;
+    gap: 50px;
+}
+
+/* استایل‌های متن مقاله */
+
+.blog-article h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+    margin: 30px 0 15px 0;
+}
+
+.blog-article p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* بلوک نقل قول (Quote) */
+.blog-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #000;
+    background: linear-gradient(to right, #E7FAFE, transparent);
+    border-left: 5px solid #000; /* یا رنگ اصلی تم پروژه */
+    padding: 30px;
+    margin: 40px 0;
+    line-height: 1.6;
+}
+
+/* =========================================
+   سایدبار (Sidebar)
+========================================= */
+
+/* بخش اشتراک گذاری */
+.share-section {
+    display: flex;
+    flex-direction: column; /* قرار دادن متن و آیکون‌ها زیر هم */
+    align-items: center; /* وسط‌چین کردن افقی کل مجموعه */
+    margin-top: 30px; 
+}
+
+/* استایل نوشته SHARE THIS ON: */
+.share-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 32px; /* ایجاد فاصله دقیق بین نوشته و آیکون‌ها */
+    text-align: center;
+}
+
+/* کانتینر خود آیکون‌ها */
+.share-icons {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 35px; 
+}
+
+.share-icons img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+.share-icons a:hover img {
+    transform: translateY(-3px);
+}
+
+/* دستور پخت‌های پیشنهادی در سایدبار */
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.sidebar-recipes h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.sidebar-recipe-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.sidebar-recipe-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.sidebar-recipe-info h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.sidebar-recipe-info .recipe-tags {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.sidebar-recipe-info .recipe-tags span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sidebar-recipe-info .recipe-tags img {
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+}
+
+.blog-img { 
+    display: block;
+    width: 415px;
+    max-width: 100%; 
+    height: auto; /* حفظ نسبت ابعاد تصویر (همان ارتفاع حدود ۲۹ پیکسل) */
+    margin-top: 24px; /* فاصله از پاراگراف یا تیتر بالایی */
+    margin-bottom: 32px; /* فاصله از محتوای پایینی */
+}
+
+/* تنظیمات هدر و دکمه ها */
+.carousel-header {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.carousel-controls-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.carousel-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #E7FAFE; /* رنگ پس زمینه دکمه ها */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* تنظیمات خود اسلایدر */
+.carousel-wrapper {
+    overflow: hidden; /* مخفی کردن اسکرول بار اضافه */
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex; /* تبدیل گرید به فلکس برای اسلایدر */
+    gap: 30px;
+    /*overflow-x: auto; /* قابلیت اسکرول */
+    /*scroll-behavior: smooth; /* حرکت نرم */
+    padding-bottom: 20px; /* فضای خالی برای سایه کارت ها */
+    /*width: max-content;
+    
+    /* مخفی کردن اسکرول بار در مرورگرها */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* تنظیم عرض ثابت برای هر کارت */
+.carousel-track .recipe-card-v2 {
+    flex: 0 0 calc(25% - 22.5px); /* نمایش 4 کارت همزمان در دسکتاپ */
+    min-width: 280px; /* حداقل عرض برای گوشی و تبلت */
+}
+
+
+/* واکنش‌گرایی برای موبایل و تبلت */
+@media (max-width: 992px) {
+    .blog-content-wrapper {
+        grid-template-columns: 1fr; /* در موبایل سایدبار می‌رود زیر مقاله */
+    }
+    
+    .blog-post-header h1 {
+        font-size: 2.2rem;
+    }
+}
