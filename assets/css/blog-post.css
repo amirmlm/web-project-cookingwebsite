@@ -62,7 +62,7 @@
     margin-bottom: 40px;
 }
 
-.blog-hero-image {
+.blog-hero-img {
     width: 100%;
     max-width: 1280px; /* همان عرضی که برای کانتینر خبرنامه در base.css دادید */
     height: 600px; /* بر اساس ابعاد فیکس شده قبلی */
@@ -276,13 +276,105 @@
 }
 
 
-/* واکنش‌گرایی برای موبایل و تبلت */
+/* =========================================
+   Responsive Styles for Mobile & Tablet
+   ========================================= */
+
+/* ==========================
+   Tablet
+========================== */
 @media (max-width: 992px) {
-    .blog-content-wrapper {
-        grid-template-columns: 1fr; /* در موبایل سایدبار می‌رود زیر مقاله */
+
+    .blog-container{
+        width: 95%;
+        padding: 30px 0;
     }
-    
-    .blog-post-header h1 {
-        font-size: 2.2rem;
+
+    .blog-post-header{
+        width:100%;
+        margin:20px auto;
+    }
+
+    .blog-content-wrapper{
+        grid-template-columns:1fr;
+        margin-left:0;
+        gap:40px;
+    }
+
+    .blog-sidebar{
+        order:2;
+    }
+}
+
+@media (max-width:768px){
+
+    /* محتوای صفحه حدود ۹۰ تا ۹۵ درصد عرض صفحه */
+    .blog-container{
+        width:92%;
+        padding:20px 0;
+    }
+
+    .blog-post-header{
+        width:100%;
+        margin:0 auto 30px;
+    }
+
+    .blog-post-header h1{
+        font-size:32px;
+        line-height:1.3;
+    }
+
+    .blog-meta{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .post-date{
+        border-left:none;
+        padding-left:0;
+    }
+
+    /* تصویر اصلی */
+    .blog-hero-img{
+        width:100%;
+        height:auto;
+        display:block;
+        border-radius:16px;
+    }
+
+    /* تصاویر داخل مقاله */
+    .blog-article img{
+        width:100%;
+        height:auto;
+        display:block;
+        border-radius:12px;
+        margin:24px 0;
+    }
+
+    .blog-content-wrapper{
+        grid-template-columns:1fr;
+        margin-left:0;
+        gap:30px;
+    }
+
+    .blog-quote{
+        padding:20px;
+        font-size:18px;
+    }
+
+    /* Recipe Section */
+    .carousel-track{
+        flex-direction:column;
+        gap:24px;
+    }
+
+    .carousel-track .recipe-card-v2{
+        flex:0 0 100%;
+        width:100%;
+        min-width:100%;
+    }
+
+    .carousel-controls-bottom{
+        display:none;
     }
 }

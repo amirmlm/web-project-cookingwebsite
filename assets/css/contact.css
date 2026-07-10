@@ -133,15 +133,68 @@
     background-color: #333333;
 }
 
-/* رسپانسیو برای موبایل */
-@media (max-width: 768px) {
-    .contact-header h1 {
-        font-size: 48px;
+/* =========================================
+   Responsive Styles (Mobile)
+========================================= */
+
+@media (max-width:768px){
+
+    .contact-page{
+        padding:40px 16px;
     }
 
-    .form-row {
-        grid-template-columns: 1fr; /* در موبایل تک ستونه می‌شود */
-        gap: 24px;
-        margin-bottom: 24px;
+    .contact-header{
+        margin-bottom:40px;
     }
+
+    .contact-header h1{
+        font-size:40px;
+        line-height:1.2;
+    }
+
+    /* عکس بالای فرم قرار بگیرد */
+    .contact-main-section{
+        grid-template-columns:1fr;
+        gap:32px;
+    }
+
+    .contact-image-wrapper{
+        max-width:350px;
+        margin:0 auto;
+    }
+
+    .contact-image-wrapper .contact-img{
+        width:100%;
+        height:auto;
+    }
+
+    /* فرم کاملاً تک ستونه */
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:24px;
+        margin-bottom:24px;
+    }
+
+    .form-group.full-width{
+        margin-bottom:32px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        padding:16px 18px;
+        font-size:16px;
+    }
+
+    .form-submit{
+        width:100%;
+    }
+
+    .submit-btn{
+        width:100%;
+        padding:18px;
+        font-size:16px;
+    }
+
 }

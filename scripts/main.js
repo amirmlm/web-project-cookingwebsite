@@ -62,3 +62,15 @@ document.querySelectorAll('.favorite-btn').forEach(btn => {
     });
 });
 
+// اسکریپت مدیریت منوی همبرگری برای هدر
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav'); // انتخاب دقیق منوی اصلی
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+    }
+});
