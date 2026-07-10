@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ۲. هدایت دکمه View Recipes در صفحه اصلی
-    const viewRecipesBtn = document.querySelector('.btn-primary');
+    const viewRecipesBtn = document.getElementById("recipe-button");
     if (viewRecipesBtn) {
         viewRecipesBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -74,3 +74,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* ==========================
+   Newsletter
+========================== */
+
+const newsletterForm = document.getElementById("newsletter-form");
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const email = document.getElementById("newsletter-email").value.trim();
+
+        try {
+
+            const response = await fetch("https://foodieland-oq9b.onrender.com/api/subscribe", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    email: email
+                })
+
+            });
+
+            if (!response.ok) {
+                throw new Error("Subscription failed");
+            }
+
+            alert("Subscribed successfully!");
+
+            newsletterForm.reset();
+
+        }
+        catch (error) {
+
+            console.error(error);
+
+            alert("Subscription failed.");
+
+        }
+
+    });
+
+}

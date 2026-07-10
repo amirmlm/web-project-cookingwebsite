@@ -84,7 +84,7 @@
                                 <span class="post-date">15 March 2022</span>
                             </div>
                         </div>
-                        <a href="#" class="btn-primary">View Recipes <span>▶</span></a>
+                        <a href="#" class="btn-primary" id="recipe-button">View Recipes <span>▶</span></a>
                     </div>
                 </div>
                 
@@ -101,7 +101,10 @@
                 <h2>Categories</h2>
                 <a href="#" class="btn-secondary">View All Categories</a>
             </div>
-            <div class="category-list">
+            <div class="category-list" id="category-list">
+                <!-- Categories will be loaded from API -->
+            </div>
+            <!-- <div class="category-list">
                 <div class="category-item bg-breakfast">
                     <img src="home-page-pics/breakfast.png" alt="Breakfast">
                     <p>Breakfast</p>
@@ -119,14 +122,14 @@
                     <p>Dessert</p>
                 </div>
                 <div class="category-item bg-lunch">
-                    <img src="home-page-pics/lunch.png"Lunch">
+                    <img src="home-page-pics/lunch.png" alt= "Lunch">
                     <p>Lunch</p>
                 </div>
                 <div class="category-item bg-chocolate">
                     <img src="home-page-pics/chocolate.png" alt="Chocolate">
                     <p>Chocolate</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -432,7 +435,7 @@
                     <p class="text-muted">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim</p>
                     
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address..." required>
+                        <input type="email" id="newsletter-email" placeholder="Your email address..." required>
                         <button type="submit" class="btn-primary">Subscribe</button>
                     </form>
                 </div>
@@ -479,5 +482,7 @@
 </footer>
 
 <script src="scripts/main.js"></script>
+<script src="scripts/home.js"></script>
+
 </body>
 </html>
